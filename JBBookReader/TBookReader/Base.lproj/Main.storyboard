@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OBZ-vE-ESH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DDQ-tE-b52">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7f-oz-DQm">
+                                <rect key="frame" x="227" y="297" width="146" height="30"/>
+                                <state key="normal" title="图文阅读器(滚动效果)"/>
+                                <connections>
+                                    <action selector="openBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7P-eN-pu4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYk-gi-KU1">
+                                <rect key="frame" x="227" y="243" width="146" height="30"/>
+                                <state key="normal" title="图文阅读器(翻书效果)">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODF-8y-uCK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DDQ-tE-b52" secondAttribute="bottom" id="5SA-St-KJ2"/>
+                            <constraint firstItem="q7f-oz-DQm" firstAttribute="top" secondItem="hYk-gi-KU1" secondAttribute="bottom" constant="24" id="GNB-sD-drt"/>
+                            <constraint firstItem="DDQ-tE-b52" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SSf-dB-n5z"/>
+                            <constraint firstAttribute="trailing" secondItem="DDQ-tE-b52" secondAttribute="trailing" id="gFV-aI-Ke1"/>
+                            <constraint firstItem="hYk-gi-KU1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="179" id="gvF-6S-Q72"/>
+                            <constraint firstItem="q7f-oz-DQm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pMv-UA-phy"/>
+                            <constraint firstItem="DDQ-tE-b52" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uaX-nr-Dgo"/>
+                            <constraint firstItem="hYk-gi-KU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xpu-mU-dEF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cs1-Ds-wvH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="418"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gry-mM-tx3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBZ-vE-ESH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KDI-61-lld">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nKj-hm-BAv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mry-sZ-zur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3.jpg" width="1000" height="994"/>
+    </resources>
+</document>
